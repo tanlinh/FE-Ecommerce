@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1",
+      "content": "Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+      "content": "Pellentesque habitant morbi tristique."
+    },
+    {
+      "title": "1",
+      "content": "1",
+      "id": 3
+    }
+  ]
+}
