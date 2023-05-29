@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 import { createPost } from '../../../services/PostService';
+import { useNavigate } from 'react-router-dom';
 
 const CreatePost = () => {
+  
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [id, setId] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const postData = { title, content };
     await createPost(postData);
     // Reset form fields
-    setId('');
     setTitle('');
     setContent('');
+    navigate('/');
   };
 
   return (
     <div>
       <h2>Create Post</h2>
       <form onSubmit={handleSubmit}>
-        {/* <label>
-          Id:
-          <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
-        </label> */}
         <label>
           Title:
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
